@@ -271,6 +271,7 @@ input,
 select,
 textarea {
 	color: #404040;
+    font-family:Arvo, serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -341,11 +342,16 @@ big {
 	font-size: 125%;
 }
 
+h1.site-title, h2.site-description{display:inline-block;float:left;width:960px;color:white;padding:0; margin:0 auto;line-height:normal;}
+h1.site-title{font-size:5em;}
+h2.site-description{font-family: 'Open Sans Condensed', sans-serif; font-weight:normal;font-size:1.8em}
+
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
+    background:pink;
 }
 
 *,
@@ -355,7 +361,8 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+    margin:0 auto;
+    position:relative;
 }
 
 blockquote:before,
@@ -494,11 +501,12 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: white;
+    text-decoration:none;
 }
 
 a:visited {
-	color: purple;
+	color: white;
 }
 
 a:hover,
@@ -524,17 +532,22 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+    background: rgba(0,0,0,0.5);
+    margin-top:2.8em;
 }
 
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+    float:right;
 }
 
 .main-navigation li {
 	float: left;
 	position: relative;
+    text-transform:uppercase;
+    line-height:5em;
 }
 
 .main-navigation a {

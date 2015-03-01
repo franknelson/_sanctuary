@@ -46,7 +46,7 @@ function _sanctuary_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -70,10 +70,10 @@ function _sanctuary_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_sanctuary_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+//	add_theme_support( 'custom-background', apply_filters( '_sanctuary_custom_background_args', array(
+//		'default-color' => 'ffffff',
+//		'default-image' => '',
+//	) ) );
 }
 endif; // _sanctuary_setup
 add_action( 'after_setup_theme', '_sanctuary_setup' );
@@ -101,6 +101,10 @@ add_action( 'widgets_init', '_sanctuary_widgets_init' );
  */
 function _sanctuary_scripts() {
 	wp_enqueue_style( '_sanctuary-style', get_stylesheet_uri() );
+    
+    wp_enqueue_style( '_sanctuary-style-google-fonts', 'http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Open+Sans+Condensed:300,300italic,700');
+    
+    //wp_enqueue_style( '_sanctuary-style-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 	wp_enqueue_script( '_sanctuary-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -115,7 +119,7 @@ add_action( 'wp_enqueue_scripts', '_sanctuary_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
