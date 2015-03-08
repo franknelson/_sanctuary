@@ -11,11 +11,12 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+		<!-- <div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', '_sanctuary' ) ); ?>"><?php printf( __( 'Proudly powered by %s', '_sanctuary' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', '_sanctuary' ), '_sanctuary', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		</div> -->
+        <?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
