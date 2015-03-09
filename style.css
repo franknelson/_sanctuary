@@ -367,10 +367,16 @@ html {
 
 body {
     width:960px;
+    height:864px;
     margin:0 auto;
     position:relative;
     background-image: url(img/homepage1.jpg);
 }
+
+footer{position:absolute; bottom:0; left:0; width:100%; overflow:hidden;background:rgba(0,0,0,0.5);padding:1rem 0 0 0;}
+
+.copyright{float:right; color:#fff;font-size:.6rem; padding:0 2rem 0 0; margin:0; line-height:0.5rem; display:inline-block; }
+.copytight p{padding:0; margin:0;}
 
 blockquote:before,
 blockquote:after,
@@ -570,9 +576,13 @@ a:active {
 	background:rgb(240,240,240);
 	float: left;
 	position: absolute;
-	top: 7em;
+	top: 5.25rem;
 	left: -999em;
 	z-index: 99999;
+    padding:0;
+    background-image:url(img/nav_triangle.svg);
+    background-position:50% 0%;
+    background-repeat:no-repeat;
 }
 
 .main-navigation ul ul li{
@@ -592,7 +602,8 @@ a:active {
 }
 
 .main-navigation ul ul li a:hover{
- background:rgb(200,200,200);   
+ background:rgb(200,200,200);
+    color:rgb(100,100,100);
 }
 
 .main-navigation ul ul ul {
@@ -605,6 +616,7 @@ a:active {
 }
 
 .main-navigation li:hover > a {
+    
 }
 
 .main-navigation ul ul :hover > a {
@@ -614,11 +626,17 @@ a:active {
 }
 
 .main-navigation ul li:hover > ul {
-	left: auto;
+	/*left: auto;*/
+    left:-50%;
+    
 }
 
 .main-navigation ul ul li:hover > ul {
 	left: 100%;
+}
+
+.main-navigation ul li a:hover {
+	color:#fff;
 }
 
 .main-navigation .current_page_item > a,
@@ -644,9 +662,31 @@ a:active {
 
 /* Social Menu */
 
-ul#menu-social {}
+ul#menu-social {margin:0;padding:0;width:50%;overflow:hidden;padding-left:2rem;}
 
-ul#menu-social li {display:inline-block; float:left;}
+ul#menu-social li {display:inline-block; float:left; line-height:2rem;padding-right:1rem;}
+
+ul#menu-social li a:before{
+ display:inline-block;
+    padding: 0 5px;
+    vertical-align:top;
+    font-family: 'Fontawesome';
+    font-size:2rem;
+    color:#fff;
+    -webkit-font-smoothing: antialiased;
+    content: '\f0c0';
+}
+
+ul#menu-social li a[href*="tumblr.com"]::before{content: '\f173';}
+
+ul#menu-social li a[href*="facebook.com"]::before{content: '\f230';}
+
+ul#menu-social li a[href*="twitter.com"]::before{content: '\f099';}
+
+ul#menu-social li a[href*="pinterest.com"]::before{content: '\f0d2';}
+
+ul#menu-social li a:hover{color:pink;}
+ul#menu-social li a:visited{color:#fff;}
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,

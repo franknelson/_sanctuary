@@ -16,7 +16,16 @@
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', '_sanctuary' ), '_sanctuary', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div> -->
-        <?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
+        
+        <button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Social Menu', '_sanctuary' ); ?></button>
+        <?php wp_nav_menu( array( 'theme_location' => 'social', 'link_before' => '<span class="screen-reader-text">', 'link_after' => '</span>', ) ); ?>
+        
+        <div class="copyright">
+            <p>
+                &copy Copyright Sanctuary Eco-Retreat <?php echo date("Y") ?>
+            </p>
+        </div>
+        
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
