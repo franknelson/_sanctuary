@@ -367,11 +367,28 @@ html {
 
 body {
     width:960px;
-    height:864px;
     margin:0 auto;
     position:relative;
-    background-image: url(img/homepage1.jpg);
 }
+
+.bkd {position:relative;}
+.bkd > p {position:absolute;font-family:'Open Sans Condensed', sans-serif;color:#fff; font-size:2.5rem;line-height:1.7rem;}
+.bkd > p.line1{text-transform: uppercase;font-family:'Arvo', serif; font-weight:bold;font-size:1.5rem;}
+
+.group1 > p.line1 {top: 35.2rem; right:6.5rem;}
+.group1 > p.line2 {top: 35.4rem; right:1rem;}
+
+.group2 > p.line1 {top: 27.8rem; left:12.5rem;}
+.group2 > p.line2 {top: 28rem; left:8.3rem;}
+
+.group3 > p.line1 {top: 38.5rem; right:15rem;color:#000;}
+.group3 > p.line2 {top: 38.7rem; right:7.6rem;color:#000;}
+
+.group4 > p.line1 {top: 30.5rem; right:5.5rem;}
+.group4 > p.line2 {top: 30.7rem; right:5.5rem;}
+
+.group5 > p.line1 {top: 25.5rem; left:3.3rem;}
+.group5 > p.line2 {top: 25.7rem; left:2.7rem;}
 
 footer{position:absolute; bottom:0; left:0; width:100%; overflow:hidden;background:rgba(0,0,0,0.5);padding:1rem 0 0 0;}
 
