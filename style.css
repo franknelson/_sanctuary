@@ -343,9 +343,8 @@ big {
 }
 
 h1.site-title, h2.site-description{display:inline-block;color:white;padding:0; margin:0;line-height:normal;}
-h1.site-title{position: absolute;top: .4rem;
-left: 2.4rem;
-font-size: 5.05rem;}
+h1.site-title{position: absolute;top: .4rem;left: 2.4rem;font-size: 5.05rem;}
+h1.site-title a:hover{color:rgb(150,150,150);}
 h2.site-description{font-family: 'Open Sans Condensed', sans-serif;font-weight: normal;font-size: 1.81rem;
 position: absolute;
 top: 5.25rem;
@@ -370,6 +369,8 @@ body {
     margin:0 auto;
     position:relative;
 }
+
+header{position: absolute;top: 0;left: 0;z-index: 9999999999999;width: 100%;}
 
 .bkd {position:relative;}
 .bkd > p {position:absolute;font-family:'Open Sans Condensed', sans-serif;color:#fff; font-size:2.5rem;line-height:1.7rem;}
@@ -633,7 +634,8 @@ a:active {
 }
 
 .main-navigation li:hover > a {
-    
+    color:rgb(200,200,200);
+    font-weight:bold;
 }
 
 .main-navigation ul ul :hover > a {
@@ -692,6 +694,10 @@ ul#menu-social li a:before{
     color:#fff;
     -webkit-font-smoothing: antialiased;
     content: '\f0c0';
+}
+
+ul#menu-social li a:hover:before{
+    color:rgb(200,200,200);
 }
 
 ul#menu-social li a[href*="tumblr.com"]::before{content: '\f173';}
