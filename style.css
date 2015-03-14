@@ -372,7 +372,7 @@ body {
 
 header{position: absolute;top: 0;left: 0;z-index: 9999999999999;width: 100%;}
 
-.bkd {position:relative;}
+.bkd {position:relative;line-height:0px;}
 .bkd > p {position:absolute;font-family:'Open Sans Condensed', sans-serif;color:#fff; font-size:2.5rem;line-height:1.7rem;}
 .bkd > p.line1{text-transform: uppercase;font-family:'Arvo', serif; font-weight:bold;font-size:1.5rem;}
 
@@ -590,6 +590,10 @@ a:active {
 	text-decoration: none;
 }
 
+.main-navigation a:hover{
+    color:rgb(200,200,200);
+}
+
 .main-navigation ul ul {
 	background:rgb(240,240,240);
 	float: left;
@@ -598,9 +602,6 @@ a:active {
 	left: -999em;
 	z-index: 99999;
     padding:0;
-    background-image:url(img/nav_triangle.svg);
-    background-position:50% 0%;
-    background-repeat:no-repeat;
 }
 
 .main-navigation ul ul li{
@@ -635,10 +636,10 @@ a:active {
 
 .main-navigation li:hover > a {
     color:rgb(200,200,200);
-    font-weight:bold;
 }
 
 .main-navigation ul ul :hover > a {
+    font-weight:bold;
 }
 
 .main-navigation ul ul a:hover {
@@ -654,8 +655,22 @@ a:active {
 	left: 100%;
 }
 
+.main-navigation ul li:hover > a::before {
+	display:inline-block;
+    padding: 0;
+    margin:0;
+    vertical-align:bottom;
+    content: '';
+    background: url(img/nav_triangle.svg);
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 35px;
+    bottom: 0rem;
+}
+
 .main-navigation ul li a:hover {
-	color:#fff;
+	color:rgb(200,200,200);
 }
 
 .main-navigation .current_page_item > a,
@@ -686,7 +701,7 @@ ul#menu-social {margin:0;padding:0;width:50%;overflow:hidden;padding-left:2rem;}
 ul#menu-social li {display:inline-block; float:left; line-height:2rem;padding-right:1rem;}
 
 ul#menu-social li a:before{
- display:inline-block;
+    display:inline-block;
     padding: 0 5px;
     vertical-align:top;
     font-family: 'Fontawesome';
@@ -708,8 +723,6 @@ ul#menu-social li a[href*="twitter.com"]::before{content: '\f099';}
 
 ul#menu-social li a[href*="pinterest.com"]::before{content: '\f0d2';}
 
-ul#menu-social li a:hover{color:pink;}
-ul#menu-social li a:visited{color:#fff;}
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
