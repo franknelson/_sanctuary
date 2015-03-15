@@ -609,7 +609,7 @@ a:active {
     border-bottom:solid 1px rgb(175,175,175);
     color:rgb(100,100,100);
     padding:0;
-    width:250px;
+    width:200px;
     
 }
 
@@ -647,7 +647,7 @@ a:active {
 
 .main-navigation ul li:hover > ul {
 	/*left: auto;*/
-    left:-50%;
+    left:-32%;
     
 }
 
@@ -655,7 +655,7 @@ a:active {
 	left: 100%;
 }
 
-.main-navigation ul li:hover > a::before {
+.main-navigation ul li:hover > ul::before {
 	display:inline-block;
     padding: 0;
     margin:0;
@@ -665,8 +665,18 @@ a:active {
     height: 30px;
     width: 30px;
     position: absolute;
-    left: 35px;
+    left: -32%;
     bottom: 0rem;
+}
+
+.main-navigation ul ul li:hover > a::before {
+	display:none;
+    padding: 0;
+    margin:0;
+    vertical-align:bottom;
+    content: '';
+    height: 0px;
+    width: 0px;
 }
 
 .main-navigation ul li a:hover {
@@ -880,6 +890,13 @@ ul#menu-social li a[href*="pinterest.com"]::before{content: '\f0d2';}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.single-cabin_type article{
+  position: absolute;
+  top: 8.7em;
+  background: rgb(255,255,255);
+  width: 100%;
 }
 
 /*--------------------------------------------------------------

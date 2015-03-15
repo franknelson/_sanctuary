@@ -110,6 +110,8 @@ function _sanctuary_scripts() {
 	wp_enqueue_script( '_sanctuary-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( '_sanctuary-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+    
+    wp_enqueue_script( 'jquery', false, false, false, false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -141,3 +143,40 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+  * Custom post type for the cabin pages
+  */
+add_action( 'init', 'create_my_post_types' );
+
+function create_my_post_types() {
+ register_post_type( 'cabin_type', 
+ array(
+      'labels' => array(
+      	'name' => __( 'Cabin Types' ),
+      	'singular_name' => __( 'Cabin Type' ),
+      	'add_new' => __( 'Add New' ),
+      	'add_new_item' => __( 'Add New Cabin Type' ),
+      	'edit' => __( 'Edit' ),
+      	'edit_item' => __( 'Edit Cabin Type' ),
+      	'new_item' => __( 'New Cabin Type' ),
+      	'view' => __( 'View Cabin Type' ),
+      	'view_item' => __( 'View Cabin Type' ),
+      	'search_items' => __( 'Search Cabin Types' ),
+      	'not_found' => __( 'No Cabin Types found' ),
+      	'not_found_in_trash' => __( 'No Cabin Types found in Trash' ),
+      	'parent' => __( 'Parent Cabin Type' ),
+      ),
+ 'public' => true,
+      'menu_position' => 4,
+      'rewrite' => array('slug' => 'team_members'),
+      'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+      'taxonomies' => array('category', 'post_tag'),
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'query_var' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+     )
+  );
+}
