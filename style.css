@@ -898,11 +898,13 @@ ul#menu-social li a[href*="pinterest.com"]::before{content: '\f0d2';}
     background: rgb(255,255,255);
     width: 100%;
     overflow:hidden;
-    padding:3rem 2rem;
+    padding:2rem 2rem;
 }
 .single-cabin_type article{
     float:right;
-    width:40%;
+    width:35%;
+    padding:0;
+    margin:0;
 }
 .single-cabin_type article h1,
 .single-cabin_type article p, 
@@ -911,10 +913,63 @@ ul#menu-social li a[href*="pinterest.com"]::before{content: '\f0d2';}
     margin:0; padding:0;line-height:1rem; font-size:1rem;
 }
 
+.single-cabin_type article h1{
+    text-transform: uppercase;
+    font-size:1.2rem;
+    font-weight:normal;
+}
+
+.single-cabin_type article p, 
+.single-cabin_type article ul,
+.single-cabin_type article li{
+    font-family:'Open Sans Condensed', sans-serif;
+    font-size:1.15rem;
+    line-height:1.15rem;
+    font-stretch:ultra-expanded;
+}
+
 .single-cabin_type article ul{
     list-style:none;
 }
 
+.single-cabin_type article p.list-head{
+    padding-top:1.5rem;
+}
+
+.single-cabin_type article button{
+    margin-top:1.25rem;
+    background:rgb(69,116,44);
+    border: none;
+	border-radius: 0px;
+	box-shadow:none;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .8em 1em;
+	text-shadow: none;
+}
+
+.single-cabin_type article button:hover{
+    background:rgb(50,100,60);
+}
+
+.single-cabin_type article a{color:rgb(69,116,44);}
+
+.single-cabin_type article a:hover{color:rgb(50,100,60);}
+
+.single-cabin_type .cabin-gallery{
+    float:left;
+    width:65%;
+    padding-right:1.25rem;
+}
+
+.single-cabin_type #slideleftgallery1, .single-cabin_type #sliderightgallery1{display:none;}
+
+.single-cabin_type #slidergallery1 img{
+    border:none;
+    padding:none;
+}
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/

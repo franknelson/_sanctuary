@@ -14,6 +14,10 @@ get_header(); ?>
         
         <main id="main" class="site-main" role="main">
             
+            <!-- gallery -->
+            <div class="cabin-gallery">
+                <?php if (function_exists('slideshow')) { slideshow($output = true, $post_id = 1, $gallery_id = false, $params = array()); } ?>
+            </div>
             
             <!-- article below -->
             <?php while ( have_posts() ) : the_post(); ?>

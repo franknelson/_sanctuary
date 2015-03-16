@@ -169,7 +169,7 @@ function create_my_post_types() {
       ),
  'public' => true,
       'menu_position' => 4,
-      'rewrite' => array('slug' => 'team_members'),
+      'rewrite' => array('slug' => 'cabin_type'),
       'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
       'taxonomies' => array('category', 'post_tag'),
       'publicly_queryable' => true,
